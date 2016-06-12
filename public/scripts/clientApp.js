@@ -8,6 +8,11 @@ var z;
 
 var processResponse= function(response){
   console.log("In processResponse " + response);
+var newParagraph = document.createElement('p');
+newParagraph.textContent = response;
+document.getElementById('answer').innerHTML='';
+document.getElementById('answer').appendChild(newParagraph);
+
 };
 
 
