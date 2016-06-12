@@ -1,8 +1,16 @@
 console.log("In clientApp.js");
 var x ;
-
 var y;
 var z;
+
+var currentOperation;
+
+$(document).on("click", ".buttonOp", function(){
+  console.log("clicked!");
+  var currentOperation = this.id;
+  console.log("current operation is now " + currentOperation);
+
+});
 
 
 
