@@ -5,6 +5,22 @@ var z;
 
 var currentOperation = "none yet";
 
+$(document).on("click", "#clear", function(){
+  //clear math method, and update DOM
+currentOperation = "none yet";
+document.getElementById('operation').innerHTML='';
+var newParagraph = document.createElement('p');
+newParagraph.textContent = "No method selected";
+document.getElementById('operation').appendChild(newParagraph);
+console.log("and current op is now : " +currentOperation);
+  //clear answer/field
+  var newParagraph2 = document.createElement('p');
+  newParagraph2.textContent = "The answer will appear here";
+  document.getElementById('answer').innerHTML='';
+  document.getElementById('answer').appendChild(newParagraph2);
+
+});
+
 $(document).on("click", ".buttonOp", function(){
   console.log("clicked!");
    currentOperation = this.id;
