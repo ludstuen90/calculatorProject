@@ -34,14 +34,17 @@ app.post('/calculate', urlencodedParser, function(req, res){
   console.log(req.body.y);
   console.log(req.body.type);
 
+var a = req.body.x;
+var b = req.body.y;
 
-var returnText = (req.body.x + req.body.y +req.body.type);
-
+a = Number(a);
+b=Number(b);
+var c = (a+b);
+var returnText = c;
+console.log("returning " + returnText);
+returnText = returnText.toString();
   res.send(returnText);
 });
-
-
-
 
 
 app.use(express.static('public'));
