@@ -47,4 +47,66 @@ returnText = returnText.toString();
 });
 
 
+
+app.post('/calculateSub', urlencodedParser, function(req, res){
+  console.log("server side logging variables: ");
+  console.log(req.body.x);
+  console.log(req.body.y);
+  console.log(req.body.type);
+
+var a = req.body.x;
+var b = req.body.y;
+
+a = Number(a);
+b=Number(b);
+var c = (a-b);
+var returnText = c;
+console.log("returning " + returnText);
+returnText = returnText.toString();
+  res.send(returnText);
+});
+
+
+
+
+app.post('/calculateMul', urlencodedParser, function(req, res){
+  console.log("server side logging variables: ");
+  console.log(req.body.x);
+  console.log(req.body.y);
+  console.log(req.body.type);
+
+var a = req.body.x;
+var b = req.body.y;
+
+a = Number(a);
+b=Number(b);
+var c = (a*b);
+var returnText = c;
+console.log("returning " + returnText);
+returnText = returnText.toString();
+  res.send(returnText);
+});
+
+
+
+app.post('/calculateDiv', urlencodedParser, function(req, res){
+  console.log("server side logging variables: ");
+  console.log(req.body.x);
+  console.log(req.body.y);
+  console.log(req.body.type);
+
+var a = req.body.x;
+var b = req.body.y;
+
+a = Number(a);
+b=Number(b);
+var c = (a/b);
+var returnText = c;
+console.log("returning " + returnText);
+returnText = returnText.toString();
+  res.send(returnText);
+});
+
+
+
 app.use(express.static('public'));
