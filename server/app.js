@@ -10,7 +10,7 @@ var urlencodedParser = bodyParser.urlencoded({extended:false});
 
 var calculatorModule=require("../nodes/calculator.js");
 
-var server = app.listen(8080, 'localhost', function(){
+var server = app.listen(process.env.PORT || 8080,  function(){
   console.log('server listening on port 8080');
 });
 
