@@ -21,6 +21,11 @@
   background-color:#D3D3D3;
 }
 
+.highlighted {
+  background-color:yellow;
+}
+
+
 
 #answer {
   text-align: center;

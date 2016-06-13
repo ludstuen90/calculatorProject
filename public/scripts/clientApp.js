@@ -22,6 +22,8 @@ console.log("and current op is now : " +currentOperation);
   $("#Number1").val('');
   $("#Number2").val('');
   phase = 0;
+  $("#answer").removeClass('highlighted');
+
 
 });
 
@@ -135,6 +137,9 @@ var newParagraph = document.createElement('p');
 newParagraph.textContent = response;
 document.getElementById('answer').innerHTML='';
 document.getElementById('answer').appendChild(newParagraph);
+$("#answer").addClass('highlighted');
+$("#answer").fadeIn(100).fadeOut(100).fadeIn(100);
+
 
 };
 
@@ -270,7 +275,6 @@ else {
   alert("Sorry, but you need to add a method first.");
 }
 };
-
 
 
     });
