@@ -103,9 +103,29 @@ $(document).on('click', '#0', function(){
   keyPressed(0);
 });
 
+//Decimal button added as a separate function because was difficult to pass "." through a function
+$(document).on('click', '#dot', function(){
+  console.log("clicked!");
+  if (phase ===0){
+    var thisNumber = "#Number1";
+    currentBox = $(thisNumber);
+    string = currentBox.val();
+  string += ".";
+  currentBox = string;
+  $(thisNumber).val(string);
+  console.log(currentBox);
+  }
 
-
-
+  else if (phase ===1){
+    var thisNumber1 = "#Number2";
+    currentBox = $(thisNumber1);
+    string = currentBox.val();
+  string += ".";
+  currentBox = string;
+  $(thisNumber1).val(string);
+  console.log(currentBox);
+}
+});
 
 var keyPressed = function(x){
 
@@ -130,10 +150,19 @@ console.log(currentBox);
 
 }};
 
-
+var commaSeparateNumber = function (val){
+  //Seperates the components of the number
+      var n= val.toString().split(".");
+      //Comma-fies the first part
+      n[0] = n[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      //Combines the two sections
+      return n.join(".");
+ };
 
 var processResponse= function(response){
   console.log("In processResponse " + response);
+
+  response = commaSeparateNumber(response);
 var newParagraph = document.createElement('p');
 newParagraph.textContent = response;
 document.getElementById('answer').innerHTML='';
