@@ -1,7 +1,8 @@
 console.log("In clientApp.js");
-var x ;
+var x;
 var y;
 var z;
+var phase =0;
 
 var currentOperation = "none yet";
 
@@ -18,10 +19,14 @@ console.log("and current op is now : " +currentOperation);
   newParagraph2.textContent = "The answer will appear here";
   document.getElementById('answer').innerHTML='';
   document.getElementById('answer').appendChild(newParagraph2);
+  $("#Number1").val('');
+  $("#Number2").val('');
+  phase = 0;
 
 });
 
 $(document).on("click", ".buttonOp", function(){
+    phase = 1;
   console.log("clicked!");
    currentOperation = this.id;
   console.log("current operation is now " + currentOperation);
@@ -41,6 +46,86 @@ console.log("upper case is now + " + upperCase);
   document.getElementById('operation').appendChild(newParagraph);
 
 });
+
+
+//adds keypad functionality
+
+$(document).on('click', '#1', function(){
+  console.log("clicked!");
+  keyPressed(1);
+});
+
+$(document).on('click', '#2', function(){
+  console.log("clicked!");
+  keyPressed(2);
+});
+
+$(document).on('click', '#3', function(){
+  console.log("clicked!");
+  keyPressed(3);
+});
+
+
+$(document).on('click', '#4', function(){
+  console.log("clicked!");
+  keyPressed(4);
+});
+
+$(document).on('click', '#5', function(){
+  console.log("clicked!");
+  keyPressed(5);
+});
+
+$(document).on('click', '#6', function(){
+  console.log("clicked!");
+  keyPressed(6);
+});
+
+$(document).on('click', '#7', function(){
+  console.log("clicked!");
+  keyPressed(7);
+});
+
+$(document).on('click', '#8', function(){
+  console.log("clicked!");
+  keyPressed(8);
+});
+
+$(document).on('click', '#9', function(){
+  console.log("clicked!");
+  keyPressed(9);
+});
+
+$(document).on('click', '#0', function(){
+  console.log("clicked!");
+  keyPressed(0);
+});
+
+
+
+
+var keyPressed = function(x){
+
+if (phase ===0){
+  var thisNumber = "#Number1";
+  currentBox = $(thisNumber);
+  string = currentBox.val();
+string += x;
+currentBox = string;
+$(thisNumber).val(string);
+console.log(currentBox);
+}
+
+else if (phase ===1){
+  var thisNumber1 = "#Number2";
+  currentBox = $(thisNumber1);
+  string = currentBox.val();
+string += x;
+currentBox = string;
+$(thisNumber1).val(string);
+console.log(currentBox);
+
+}};
 
 
 
@@ -74,6 +159,7 @@ console.log("input 3 is now " + input3);
 
 });
 var runCalc = function(x, y, z) {
+
   console.log("inside runCalc");
 
   var inputObject= {

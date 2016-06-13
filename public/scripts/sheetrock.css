@@ -1,0 +1,27 @@
+.buttonOp {
+  text-align:center;
+  display:inline;
+}
+
+
+#buttonOp {
+  text-align:center;
+  display:inline;
+}
+.calculator {
+  text-align:center;
+  display:inline;
+}
+
+.numPad{
+  font-size:14px;
+}
+
+.calculator h2{
+  background-color:#D3D3D3;
+}
+
+
+#answer {
+  text-align: center;
+}

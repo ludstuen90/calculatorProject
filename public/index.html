@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Test page</title>
+    <title>Digital Calculator</title>
 <script type="text/javascript" src="scripts/jquery.min.js"></script>
 
 <script type="text/javascript" src="scripts/clientApp.js"></script>
@@ -13,23 +13,44 @@
   </head>
   <body>
     <div class="calculator">
-    <h2>Testarooski</h2>
+    <h2>Calculator App</h2>
 
-
-    <h2>POST TEST</h2>
     <form >
       <input type="text" id="Number1" name="Number1"/>
       <input type="text" id="Number2" name="Number2"/>
-      <!-- <input type="text" id="calcType" name="mathType"/> -->
 
-      <!-- <input type="submit" id="calculateBtn" value="Submit"/> -->
-      <br>
+<!-- Number pad --><br><br>
+<div id="numPad">
+  <button type="button" class="numPad" id="1" name="1">1</button>
+  <button type="button" class="numPad" id="2" name="2">2</button>
+  <button type="button" class="numPad" id="3" name="3">3</button>
+
+  <br>
+
+  <button type="button" class="numPad" id="4" name="4">4</button>
+  <button type="button" class="numPad" id="5" name="5">5</button>
+  <button type="button" class="numPad" id="6" name="6">6</button>
+
+  <br>
+
+  <button type="button" class="numPad" id="7" name="7">7</button>
+  <button type="button" class="numPad" id="8" name="8">8</button>
+  <button type="button" class="numPad" id="9" name="9">9</button>
+  <br>
+  <button type="button" class="numPad" id="." name=".">.</button>
+  <button type="button" class="numPad" id="0" name="0">0</button>
+
+
+</div>
+
+
+      <br><br>
       <button type="button" class="buttonOp" id="add" name="add">Add</button>
-      <br>
+
       <button type="button" class="buttonOp" id="subtract" name="subtract">Subtract</button>
-      <br>
+
       <button type="button" class="buttonOp" id="multiply" name="multiply">Multiply</button>
-      <br>
+
       <button type="button" class="buttonOp" id="divide" name="divide">Divide</button>
 <br><br><div id="operation">No method selected</div>
       <br><button type="button" id="calculateBtn">Submit</button><br>
