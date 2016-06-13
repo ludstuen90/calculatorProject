@@ -106,6 +106,7 @@ $(document).on('click', '#0', function(){
 
 
 
+
 var keyPressed = function(x){
 
 if (phase ===0){

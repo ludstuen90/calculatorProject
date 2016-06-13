@@ -15,11 +15,26 @@
     <div class="calculator">
     <h2>Calculator App</h2>
 
+    <div id="answer">
+      <p>The answer will appear here</p>
+    </div>
+
     <form >
       <input type="text" id="Number1" name="Number1"/>
       <input type="text" id="Number2" name="Number2"/>
 
-<!-- Number pad --><br><br>
+      <br><br>
+
+      <button type="button" class="buttonOp" id="add" name="add">Add</button>
+
+      <button type="button" class="buttonOp" id="subtract" name="subtract">Subtract</button>
+
+      <button type="button" class="buttonOp" id="multiply" name="multiply">Multiply</button>
+
+      <button type="button" class="buttonOp" id="divide" name="divide">Divide</button>
+<br><div id="operation"><p>No method selected</p></div>
+<br>
+<!-- Number pad -->
 <div id="numPad">
   <button type="button" class="numPad" id="1" name="1">1</button>
   <button type="button" class="numPad" id="2" name="2">2</button>
@@ -37,30 +52,21 @@
   <button type="button" class="numPad" id="8" name="8">8</button>
   <button type="button" class="numPad" id="9" name="9">9</button>
   <br>
-  <button type="button" class="numPad" id="." name=".">.</button>
+  <button type="button" class="numPad" id="dot" name="dot">.</button>
   <button type="button" class="numPad" id="0" name="0">0</button>
 
 
 </div>
 
 
-      <br><br>
-      <button type="button" class="buttonOp" id="add" name="add">Add</button>
 
-      <button type="button" class="buttonOp" id="subtract" name="subtract">Subtract</button>
 
-      <button type="button" class="buttonOp" id="multiply" name="multiply">Multiply</button>
-
-      <button type="button" class="buttonOp" id="divide" name="divide">Divide</button>
-<br><br><div id="operation">No method selected</div>
       <br><button type="button" id="calculateBtn">Submit</button><br>
       <button type="button" id="clear">Clear</button>
     </form>
   </div>
+<br>
 
-  <div id="answer">
-    <p>The answer will appear here</p>
-  </div>
 
   </body>
 </html>
